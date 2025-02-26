@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>QUIZZ</title>
+</head>
+<body>
+    
+    <!--
+        1. créer l'interface, les blocs, les boutons radios
+        2. Styliser le tout avec le css
+        3. recuperer les données au clic
+        4.Comparer les resultats 
+        5. afficher des phrases en fonction des résultats
+        6. changer la couleur des blocs en fonction
+
+    -->
+    <h1>Quizz de culture general </h1>
+
+    <div class="container-global">
+
+        <form action="" class="form-quizz">
+            <!-- blocs de questions à afficher  -->
+
+            <div class="question-bloc">
+                <h4>En quelle année le <span class="focus">Cameroun</span> a eu son Indépendance :</h4>
+ 
+                <div>
+                    <input type="radio" name="q1" id="date1" value="a" checked>
+                    <label for="date1">1981</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" id="date2" value="b">
+                    <label for="date2">1960</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" id="date3" value="c">
+                    <label for="date3">1972</label>
+                </div>
+            </div>
+
+            <div class="question-bloc">
+                <h4>Qui est l'actuel Président du <span class="focus">Cameroun</span> :</h4>
+
+                <div>
+                    <input type="radio" name="q2" id="MAurice" value="a" checked>
+                    <label for="Maurice">Maurice Kamto</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" id="Paul" value="b">
+                    <label for="Paul">Martin Paul Samba</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" id="Mbia" value="c">
+                    <label for="Mbia">Paul Mbia</label>
+                </div>
+            </div>
+
+
+            <div class="question-bloc">
+                <h4>Qui a inventé la première <span class="focus">Calculatrice</span> :</h4>
+
+                <div>
+                    <input type="radio" name="q3" id="Blaise" value="a" checked>
+                    <label for="Blaise">Blaise Pascal</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" id="Albert" value="b">
+                    <label for="Albert">Albert Einstein</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" id="Elon" value="c">
+                    <label for="Elon">Elon Musk</label>
+                </div>
+            </div>
+
+            <div class="question-bloc">
+                <h4>Quelle est le physicien qui est à l'origine de la <span class="focus">Relativité Générale</span> et de la <span class="focus">Relativité Restreindre</span> :</h4>
+
+                <div>
+                    <input type="radio" name="q4" id="Marie" value="a" checked>
+                    <label for="Marie">Marie Curie</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" id="Einstein" value="b">
+                    <label for="Einstein">Albert Einstein</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" id="Newton" value="c">
+                    <label for="Newton">Isaac Newton</label>
+                </div>
+            </div>
+
+            <div class="question-bloc">
+                <h4>Quel est la signification du mot <span class="focus">FIFA</span> :</h4>
+
+                <div>
+                    <input type="radio" name="q5" id="res1" value="a" checked>
+                    <label for="res1">Confédération de football mondiale</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" id="res2" value="b">
+                    <label for="res2">Fédération Internation de Football Association</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" id="res3" value="c">
+                    <label for="res3">Coupe D'afrique des Nations</label>
+                </div>
+            </div>
+
+            <!-- bouton de soumission -->
+            <button type="submit" class="submit" value=""><span>Valider mes reponses</span></button>
+        </form>
+
+        <!-- emplacement pour l'affichage du score -->
+        <div class="score">
+            
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

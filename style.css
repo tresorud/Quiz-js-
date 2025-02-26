@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --danger :#ff2a2a31;
+    --bouton :#47f747;
+    --focus : #4ff67c;
+    --text : #222;
+}
+
+/* commençons avec le taille et la police */
+html{
+    scroll-behavior: smooth;
+    font-size: 20px;
+    font-family: 'poppins',sans-serif;
+    color: var(--text);
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: var(--text);
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    color: var(--bouton);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* passons au container  */
+.container-global{
+    max-width: 100%;
+    margin: 0 10px;
+}
+
+.container-global form{
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.container-global .form-quizz .question-bloc, .container-global .score{
+    width: 80%;
+    min-width: 400px;
+    /* border: #adacac solid 1px; */
+    outline: 0;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-global .score{
+    margin: auto;
+}
+.container-global .form-quizz .question-bloc .focus{
+    color: var(--focus);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container-global .form-quizz button{
+    padding: 20px 30px;
+    border: 0;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #273e60;
+    color: var(--focus);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.container-global .form-quizz button span{
+    z-index: 9999;
+    position: relative;
+}
+
+.container-global .form-quizz button:hover{
+    color: #273e60;
+}
+
+.container-global .form-quizz button::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 0;
+    background-color: var(--bouton);
+    transition: all ease .2s;
+}
+
+.container-global .form-quizz button:hover::before{
+    width: 230px;
+    height: 230px;
+}
+
+.question-bloc.danger {
+    background-color: var(--danger);
+    animation: shake ease 0.3s;
+    transition: all ease;
+}
+
+.question-bloc.right{
+    background-color: #5cf55c42;
+}
+h4 .focus{
+    color: var(--focus);
+}
+
+@keyframes shake {
+    0%,100%{
+        transform: translate(0px) rotate(0deg);
+    }
+    20%,60%{
+        transform: translateX(6px) /*rotate(-5deg); */
+    }
+    40%,80%{
+        transform: translateX(-6px) /*rotate(-5deg); */
+    }
+    
+}
